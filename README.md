@@ -28,7 +28,10 @@
 - *Beispiel:* k-Nearest Neighbor (speichert alle Trainingsdaten)
 
 
-### 3. Beschreiben Sie das Bias–Variance Trade-off und seine Bedeutung für Over-/Underfitting.
+### 3. Beschreiben Sie das Bias–Variance Trade-off und seine Bedeutung für Over-/Underfitting:
+
+![Bias-Variance-Trade-off](https://github.com/user-attachments/assets/92a132a1-9c51-479f-8b48-24937e66b97f)
+
 
 *🎯 Bias:* Systematischer Fehler durch zu vereinfachte Modellannahmen
 
@@ -88,11 +91,11 @@ Precision = TP / (TP + FP)
 *c) Recall vs. FPR:*
 
 *📊 Recall (TPR):*
-- Anteil der korrekt identifizierten positiven Fälle
+- Anteil der korrekt erkannter positiven Fälle
 - TPR = TP / (TP + FN) = 50 / 60 = 83.3%
 
 *⚠️ False Positive Rate (FPR):*
-- Anteil der fälschlicherweise als positiv klassifizierten negativen Fälle
+- Anteil der falsch erkannter positive unter negativen Fälle
 - FPR = FP / (FP + TN) = 30 / 140 = 21.4%
 
 ---
@@ -374,8 +377,8 @@ Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3
 
 - Accuracy = (TP + TN) / (TP + TN + FP + FN)
 - Precision = TP / (TP + FP)
-- Recall = TP / (TP + FN)
-- F1-Score = 2 · (Precision · Recall) / (Precision + Recall)
+- Recall(TPR) = TP / (TP + FN) 
+- FPR = FP / (FP + TN)
 
 
 ### CNN Output Size:
