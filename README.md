@@ -219,7 +219,7 @@ d₅ = √((40-60)² + (0.45-0.6)²) = √(400 + 0.0225) = 20.001 <br>
 
 ## Task 6: Unsupervised Learning - Clustering
 
-### a) k-Means-Algorithmus:
+### a) Erläutern Sie den k-Means-Algorithmus und seine Konvergenzbedingung:
 
 *Schritte:*
 1. *Initialisierung:* k Zentroide zufällig platzieren
@@ -229,7 +229,7 @@ d₅ = √((40-60)² + (0.45-0.6)²) = √(400 + 0.0225) = 20.001 <br>
 
 *Konvergenzbedingung:* Zentroide ändern sich nicht mehr (oder nur minimal)
 
-### b) Nachteile und Alternative:
+### b) Nennen Sie zwei Nachteile von k-Means und schlagen Sie eine Alternative vor:
 
 *🔴 Nachteile von k-Means:*
 - Erfordert Vorgabe von k
@@ -241,7 +241,7 @@ d₅ = √((40-60)² + (0.45-0.6)²) = √(400 + 0.0225) = 20.001 <br>
 - Automatische Bestimmung der Clusteranzahl
 - Robust gegenüber Ausreißern
 
-### c) Distanzmetrik-Einfluss:
+### c) Diskutieren Sie, wie die Wahl der Distanzmetrik (z. B. Euclid vs. Manhattan) das Clustering-Ergebnis beeinflusst:
 
 *📏 Euklidische Distanz:* Bevorzugt sphärische Cluster
 
@@ -253,7 +253,7 @@ d₅ = √((40-60)² + (0.45-0.6)²) = √(400 + 0.0225) = 20.001 <br>
 
 ## Task 7: Neuronale Netze
 
-### a) CNN-Architektur für Bildklassifikation:
+### a) Skizzieren Sie die Architektur eines einfachen CNN für die Bildklassifikation und beschriften Sie die Layer:
 
 
 Input Image → Conv Layer → Pooling → Conv Layer → Pooling → Flatten → Dense Layer (Softmax)
@@ -265,7 +265,7 @@ Input Image → Conv Layer → Pooling → Conv Layer → Pooling → Flatten �
 - *Dense Layer:* Vollvernetzte Schicht
 - *Softmax:* Wahrscheinlichkeitsverteilung
 
-### b) Ausgabegröße-Berechnung:
+### b) Berechnen Sie die Ausgabegröße eines 5×5-Bilds bei einem 2×3-Filter und Stride 2 (ohne Padding und mit Zero-Padding P=1):
 
 *Input:* 5×5, Filter: 2×3, Stride: 2
 
@@ -285,7 +285,7 @@ Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3
 → Ausgabe: 3×3
 
 
-### c) Parameter Sharing:
+### c) Erklären Sie kurz, warum Parameter Sharing in CNNs wichtig ist:
 
 *🔄 Gewichtswiederverwendung:* Gleiche Filter werden auf gesamtes Bild angewendet
 
@@ -302,7 +302,7 @@ Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3
 
 *Projekt:* Gesundheitszustand von Pflanzen vorhersagen
 
-### a) Datenerfassung und -verarbeitung:
+### a) Welche Daten (Features, Label) erfassen Sie, und wie verarbeiten Sie sie vor?
 
 *🌱 Features:*
 - *Alter:* numerisch, in Tagen
@@ -317,7 +317,7 @@ Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3
 - Ausreißer-Behandlung bei Wasserzufuhr
 - Fehlende Werte durch Median ersetzen
 
-### b) Modell und Metriken:
+### b) Welches Modell setzen Sie ein, und mit welchen Metriken evaluieren Sie es?
 
 *🌳 Modell: Random Forest Classifier*
 - Kann mit gemischten Datentypen umgehen
@@ -330,29 +330,28 @@ Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3
 - *F1-Score:* für unbalancierte Klassen
 - *Confusion Matrix:* detaillierte Analyse
 
-### c) ML-Workflow:
-
+### c) Skizzieren Sie den ML-Workflow:
 
 1. Datensammlung
-      ↓
+      
 2. Explorative Datenanalyse
-      ↓
+      
 3. Datenvorbereitung
-      ↓
+      
 4. Train/Validation/Test Split
-      ↓
+      
 5. Modelltraining
-      ↓
+      
 6. Hyperparameter-Tuning (Grid Search)
-      ↓
+      
 7. Modell-Evaluierung
-      ↓
+      
 8. Deployment
-      ↓
+      
 9. Monitoring
 
 
-### d) Unsicherheitsquellen und Lösungsansätze:
+### d) Diskutieren Sie Quellen möglicher Unsicherheiten in den Vorhersagen und geeignete Ansätze, um darauf zu reagieren:
 
 *🔴 Unsicherheitsquellen:*
 - Messfehler bei Wasserzufuhr
@@ -373,24 +372,24 @@ Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3
 
 ### Classification Metrics:
 
-Accuracy = (TP + TN) / (TP + TN + FP + FN)
-Precision = TP / (TP + FP)
-Recall = TP / (TP + FN)
-F1-Score = 2 · (Precision · Recall) / (Precision + Recall)
+- Accuracy = (TP + TN) / (TP + TN + FP + FN)
+- Precision = TP / (TP + FP)
+- Recall = TP / (TP + FN)
+- F1-Score = 2 · (Precision · Recall) / (Precision + Recall)
 
 
 ### CNN Output Size:
 
-Output_size = floor((Input_size - Filter_size + 2·Padding) / Stride) + 1
+- Output_size = floor((Input_size - Filter_size + 2·Padding) / Stride) + 1
 
 
 ### Gradient Descent:
 
-w_new = w_old - α · ∇J(w)
+- w_new = w_old - α · ∇J(w)
 
 
 ### k-NN Distance:
 
-Euclidean: d = √((x₁-x₂)² + (y₁-y₂)²)
-Manhattan: d = |x₁-x₂| + |y₁-y₂|
+- Euclidean: d = √((x₁-x₂)² + (y₁-y₂)²)
+- Manhattan: d = |x₁-x₂| + |y₁-y₂|
 
