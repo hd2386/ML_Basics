@@ -187,7 +187,7 @@ w₁ = 1 - 0.01 · (-25) = 1.25
 | 60      | 0.6          | 1    
 
 
-*Neuer Punkt:* (40, 0.45)
+*Ein neuer Nutzer kommt mit (𝑡 = 40, 𝑠 = 0.45).*
 
 ### a) Berechnen Sie die euklidischen Distanzen:
 
