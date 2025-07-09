@@ -270,21 +270,21 @@ Input Image → Conv Layer → Pooling → Conv Layer → Pooling → Flatten �
 
 ### b) Berechnen Sie die Ausgabegröße eines 5×5-Bilds bei einem 2×3-Filter und Stride 2 (ohne Padding und mit Zero-Padding P=1):
 
-*Input:* 5×5, Filter: 2×3, Stride: 2
+Gegeben: *Input:* 5×5, *Filter:* 2×3, *Stride:* 2
 
 *Formel:* Output_size = floor((Input_size - Filter_size + 2·Padding) / Stride) + 1
 
 *Ohne Padding (P=0):*
 
-Output_height = floor((5 - 2)/2) + 1 = floor(1.5) + 1 = 2
-Output_width = floor((5 - 3)/2) + 1 = floor(1) + 1 = 2
+Output_height = floor((5 - 2)/2) + 1 = floor(1.5) + 1 = 2 <br>
+Output_width = floor((5 - 3)/2) + 1 = floor(1) + 1 = 2 <br>
 → Ausgabe: 2×2
 
 
 *Mit Zero-Padding (P=1):*
 
-Output_height = floor((5 + 2·1 - 2)/2) + 1 = floor(2.5) + 1 = 3
-Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3
+Output_height = floor((5 + 2·1 - 2)/2) + 1 = floor(2.5) + 1 = 3 <br>
+Output_width = floor((5 + 2·1 - 3)/2) + 1 = floor(2) + 1 = 3 <br>
 → Ausgabe: 3×3
 
 
