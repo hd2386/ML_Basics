@@ -192,7 +192,9 @@ w₁ = 1 - 0.01 · (-25) = 1.25
 
 *Ein neuer Nutzer kommt mit (𝑡 = 40, 𝑠 = 0.45).*
 
-### a) Berechnen Sie die euklidischen Distanzen:
+### a) Berechnen Sie die euklidischen Distanzen nach:
+<img width="461" height="101" alt="image" src="https://github.com/user-attachments/assets/bb9ec110-ffc8-40e5-b2aa-b512971fed11" /> <br>
+
 
 d₁ = √((40-30)² + (0.45-0.2)²) = √(100 + 0.0625) = 10.003 <br>
 d₂ = √((40-45)² + (0.45-0.5)²) = √(25 + 0.0025) = 5.001 <br>
@@ -203,7 +205,7 @@ d₅ = √((40-60)² + (0.45-0.6)²) = √(400 + 0.0225) = 20.001 <br>
 
 ### b) Klassifizieren Sie für 𝑘 = 1,3,5 (Mehrheitsentscheid):
 
-*Sortierte Distanzen:*
+*Sortierte Distanzen nach Nähe:*
 1. d₂ = 5.001 → Label 1
 2. d₃ = 10.001 → Label 1
 3. d₁ = 10.003 → Label 0
