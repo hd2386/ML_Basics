@@ -248,11 +248,16 @@ d₅ = √((40-60)² + (0.45-0.6)²) = √(400 + 0.0225) = 20.001 <br>
 
 ### c) Diskutieren Sie, wie die Wahl der Distanzmetrik (z. B. Euclid vs. Manhattan) das Clustering-Ergebnis beeinflusst:
 
-*📏 Euklidische Distanz:* Bevorzugt sphärische Cluster
+*📏 Euklidische Distanz:* Bevorzugt sphärische Cluster:
 
-*🔄 Manhattan-Distanz:* Weniger empfindlich gegenüber Ausreißern, bevorzugt achsenparallele Strukturen
+<img width="250" height="450" alt="image" src="https://github.com/user-attachments/assets/7cfe83bf-2d63-4dea-9f78-3e5339460d3c" />
 
-*Wahl abhängig von:* Datencharakteristik und gewünschter Clusterform
+
+*🔄 Manhattan-Distanz:* Weniger empfindlich gegenüber Ausreißern, bevorzugt achsenparallele Strukturen:
+
+<img width="250" height="450" alt="image" src="https://github.com/user-attachments/assets/c3f5d6a9-111f-4733-ab0f-bc45f35ea06f" />
+
+- *Wahl abhängig von:* Datencharakteristik und gewünschter Clusterform
 
 ---
 
