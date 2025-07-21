@@ -221,6 +221,84 @@ d₅ = √((40-60)² + (0.45-0.6)²) = √(400 + 0.0225) = 20.001 <br>
 
 ![k-Nearest Neighbor](https://github.com/user-attachments/assets/ff5fe4b4-4efa-4cc9-8ba8-1fc1615b3d8c)
 
+---
+
+## EXTRA: Decision Trees und Random Forest 🌳
+
+### Datensatz
+| Alter  | Einkommen | Kredit_Historie | Kreditwürdig |
+|--------|-----------|-----------------|--------------|
+| Jung   | Niedrig   | Schlecht        | Nein         |
+| Jung   | Niedrig   | Gut             | Nein         |
+| Jung   | Hoch      | Gut             | Ja           |
+| Mittel | Niedrig   | Schlecht        | Nein         |
+| Mittel | Hoch      | Gut             | Ja           |
+| Mittel | Hoch      | Schlecht        | Ja           |
+| Alt    | Hoch      | Schlecht        | Ja           |
+| Alt    | Niedrig   | Gut             | Nein         |
+
+
+### a) Information Gain Berechnung (8 Punkte)
+**Berechnen Sie den Information Gain für das Feature "Einkommen" als Root-Split.**
+
+**Schritt 1: Entropie des Gesamtdatensatzes**
+- Gesamt: 8 Datenpunkte
+- Ja: 4, Nein: 4
+- H(S) = -4/8 × log₂(4/8) - 4/8 × log₂(4/8) = -0.5 × (-1) - 0.5 × (-1) = **1.0**
+
+**Schritt 2: Split nach "Einkommen"**
+- Niedrig: 4 Punkte (0 Ja, 4 Nein)
+- Hoch: 4 Punkte (4 Ja, 0 Nein)
+
+**Schritt 3: Entropien der Teilmengen**
+- H(Niedrig) = -0/4 × log₂(0/4) - 4/4 × log₂(4/4) = 0 - 0 = **0.0**
+- H(Hoch) = -4/4 × log₂(4/4) - 0/4 × log₂(0/4) = 0 - 0 = **0.0**
+
+**Schritt 4: Information Gain**
+IG(S,Einkommen) = H(S) - [4/8 × H(Niedrig) + 4/8 × H(Hoch)]
+IG(S,Einkommen) = 1.0 - [0.5 × 0.0 + 0.5 × 0.0] = **1.0**
+
+
+### b) Decision Tree Konstruktion (4 Punkte)
+**Zeichnen Sie den vollständigen Decision Tree für diesen Datensatz.**
+
+```
+              Einkommen
+             /         \
+        Niedrig         Hoch
+           |             |
+         Nein           Ja
+```
+
+Da "Einkommen" bereits perfekte Trennung liefert (IG = 1.0), ist der Tree sehr einfach.
+
+
+### c) Random Forest Konzept (4 Punkte)
+
+**1. Erklären Sie, wie Random Forest die Probleme einzelner Decision Trees löst.**
+
+Random Forest reduziert Overfitting durch Ensemble-Voting und erhöht Generalisierung durch Bootstrap-Sampling und zufällige Feature-Auswahl.
+
+**2. Finale Vorhersage bei Mehrheitsentscheid:**
+- Tree 1: "Ja" (Konfidenz: 0.8)
+- Tree 2: "Nein" (Konfidenz: 0.9)
+- Tree 3: "Ja" (Konfidenz: 0.7)
+
+**Finale Vorhersage: "Ja"** (2 von 3 Trees stimmen für "Ja")
+
+
+### d) Feature Importance (4 Punkte)
+**Interpretieren Sie die Feature Importance Werte und erklären Sie praktische Schlüsse.**
+
+**Interpretation der Werte:**
+- Einkommen (0.60): Wichtigstes Kriterium für Kreditvergabe
+- Kredit_Historie (0.25): Zweitwichtigstes Kriterium
+- Alter (0.15): Geringste Bedeutung
+
+**Praktische Schlüsse für die Kreditvergabe:**
+Fokus auf Einkommensverifikation bei Kreditentscheidungen, Kredithistorie als sekundäres Kriterium prüfen, Alter hat minimalen Einfluss.
+
+---
 
 ## Task 6: Unsupervised Learning - Clustering
 
